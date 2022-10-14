@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Box } from "@chakra-ui/react";
 import Header from "@components/Header";
 import type { NextPage } from "next";
 import { signIn, useSession } from "next-auth/react";
