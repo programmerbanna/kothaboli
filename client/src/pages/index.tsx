@@ -1,11 +1,16 @@
+import { Button } from "@chakra-ui/react";
 import Header from "@components/Header";
 import type { NextPage } from "next";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 const Home: NextPage = () => {
   const { data } = useSession();
   console.log(data);
-  return <Header />;
+  return (
+    <div className="">
+      <Button onClick={() => signIn("google")}> Sign in</Button>
+    </div>
+  );
 };
 
 export default Home;
